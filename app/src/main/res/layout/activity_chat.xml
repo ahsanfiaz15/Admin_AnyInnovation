@@ -8,7 +8,7 @@
     tools:context=".Chat">
 
     <ImageButton
-        android:id="@+id/btn_send3"
+        android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/circle_send"
@@ -64,7 +64,7 @@
         app:cardCornerRadius="24dp"
         app:cardBackgroundColor="@color/card_color"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_send3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_send"
         app:layout_constraintStart_toStartOf="@+id/guideline93">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -136,20 +136,5 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView47"
         app:layout_constraintVertical_bias="1.0" />
 
-    <include
-        android:id="@+id/include12"
-        layout="@layout/item_chat_receive"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView47" />
-
-    <include
-        layout="@layout/item_chat_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,7 @@ import com.ass_soft.admin_anyinnovation.Helpers.Config;
 import com.ass_soft.admin_anyinnovation.Helpers.SharedPref;
 import com.ass_soft.admin_anyinnovation.Login;
 import com.ass_soft.admin_anyinnovation.MainActivity;
+import com.ass_soft.admin_anyinnovation.Objects.EntScrip;
 import com.ass_soft.admin_anyinnovation.Objects.EntrepreneurObject;
 import com.ass_soft.admin_anyinnovation.R;
 import com.bumptech.glide.Glide;
@@ -35,6 +36,7 @@ import java.util.Map;
 
 public class Entrepreneur_Profile extends AppCompatActivity {
    String email="";
+   EntrepreneurObject object;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +109,7 @@ public class Entrepreneur_Profile extends AppCompatActivity {
         progressDialog.setMessage("Please wait...");
         progressDialog.show();
 
-        String url = Config.url+ "/get_profile.php";
+        String url = Config.url+ "/admin_get_ent_profile.php";
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
@@ -119,11 +121,13 @@ public class Entrepreneur_Profile extends AppCompatActivity {
                             else {
                                 Gson gson = new Gson();
                                 JSONArray array = new JSONArray(response);
+                            JSONArray array1=array.getJSONArray(0);
                              EntrepreneurObject entrepreneur=new EntrepreneurObject();
-                                for(int i=0;i<array.length();i++) {
-                                    entrepreneur = gson.fromJson(array.getJSONObject(i).toString(), EntrepreneurObject.class);
+                             object=entrepreneur;
+                            // for(int i=0;i<array.length();i++) {
+                                    entrepreneur = gson.fromJson(array1.getJSONObject(0).toString(), EntrepreneurObject.class);
 
-                                }
+                              //  }
                                 ImageView imageView=findViewById(R.id.profile_entrepreneur);
                                 Glide
                                         .with(Entrepreneur_Profile.this)
@@ -179,6 +183,33 @@ public class Entrepreneur_Profile extends AppCompatActivity {
 
                                 TextView pro_name=findViewById(R.id.tv_project_name);
                                 pro_name.setText(entrepreneur.getPro_name());
+
+                                if(array1.get(1).equals(null)){
+                                    //String s="ahsan";
+                                  //  Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+                                }
+                                else{
+                                    EntScrip scrip= gson.fromJson(array1.getJSONObject(1).toString(),EntScrip.class);
+                                    TextView tv_script=findViewById(R.id.tv_hub_expiry_date);
+                                    tv_script.setText(scrip.getExp_date());
+                                    TextView tv_pc=findViewById(R.id.tv_subscription_plan);
+                                    tv_pc.setText(scrip.getPackge());
+
+                                }
+                                if(array1.get(2).equals(null)){
+                                    //String s="ahsan";
+                                    //  Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+                                }
+                                else{
+                                    EntScrip scrip= gson.fromJson(array1.getJSONObject(2).toString(),EntScrip.class);
+                                    TextView tv_script=findViewById(R.id.tv_academy_expiry_date);
+                                    tv_script.setText(scrip.getExp_date());
+
+
+                                }
+
+
+
                             }
                         } catch (Exception e) {
 
@@ -216,16 +247,20 @@ public class Entrepreneur_Profile extends AppCompatActivity {
     }
 
     public void messageEntrepreneur(View view) {
-  Toast.makeText(getApplicationContext(),"Underdevelopment",Toast.LENGTH_LONG).show();
-     //   Intent intent = new Intent(Entrepreneur_Profile.this, Chat.class);
-       // startActivity(intent);
+ // Toast.makeText(getApplicationContext(),"Underdevelopment",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(Entrepreneur_Profile.this, Chat.class);
+        intent.putExtra("name",object.getFullname());
+        intent.putExtra("rec_email",object.getEmail());
+        intent.putExtra("profile",object.getProfile());
+        startActivity(intent);
     }
 
     public void viewMentors(View view) {
-        Toast.makeText(getApplicationContext(),"Underdevelopment",Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(),"Underdevelopment",Toast.LENGTH_LONG).show();
 
-        //Intent intent = new Intent(Entrepreneur_Profile.this, Entrepreneur_ViewMentors.class);
-       // startActivity(intent);
+        Intent intent = new Intent(Entrepreneur_Profile.this, Entrepreneur_ViewMentors.class);
+        intent.putExtra("email",email);
+        startActivity(intent);
     }
     private int getAge(int year, int month, int day){
         Calendar dob = Calendar.getInstance();

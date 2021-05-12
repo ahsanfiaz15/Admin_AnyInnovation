@@ -56,7 +56,7 @@ public class Entrepreneur_list extends RecyclerView.Adapter<Entrepreneur_list_Ho
                 .centerCrop()
                 .into(holder.img);
 
-       /*  holder.card.setOnClickListener(new View.OnClickListener() {
+         holder.card.setOnClickListener(new View.OnClickListener() {
                                             @Override
                                             public void onClick(View view) {
                                                 Intent intent = new Intent(context, Entrepreneur_Profile.class);
@@ -70,7 +70,7 @@ public class Entrepreneur_list extends RecyclerView.Adapter<Entrepreneur_list_Ho
                                         }
          );
 
-*/
+
     }
 
     @Override
