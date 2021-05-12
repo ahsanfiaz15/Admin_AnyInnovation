@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_video_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <ImageButton
+        android:id="@+id/btn_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_course_title"
+        app:srcCompat="@drawable/ic_baseline_cancel" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_thumbnail"
+        android:layout_width="100dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/purple_200"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:alpha="0.5"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/img_thumbnail"
+        app:layout_constraintEnd_toEndOf="@+id/img_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/img_thumbnail" />
+
+    <TextView
+        android:id="@+id/tv_total_videos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView11"
+        app:layout_constraintEnd_toEndOf="@+id/imageView11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/img_thumbnail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_total_videos"
+        app:srcCompat="@drawable/ic_baseline_playlist" />
+
+    <TextView
+        android:id="@+id/tv_course_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:lineSpacingExtra="4dp"
+        android:text="This is video title This is video title This is video title"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_cancle"
+        app:layout_constraintStart_toEndOf="@+id/img_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/img_thumbnail" />
+
+    <TextView
+        android:id="@+id/tv_tutor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tutor's name"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_course_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_course_title" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="00$"
+        android:textColor="@color/purple_500"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_cancle"
+        app:layout_constraintStart_toStartOf="@+id/btn_cancle"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cancle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ass_soft.admin_anyinnovation">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Admin_AnyInnovation"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".general_duties.academy.MovieClub_RegisteredList"></activity>
+        <activity android:name=".general_duties.academy.BookClub_RegisteredList" />
+        <activity android:name=".general_duties.academy.GeneralDuties_InnovationCircleRegisteredList" />
+        <activity android:name=".general_duties.academy.GeneralDuties_IdeaEvaluationViewIdea" />
+        <activity android:name=".DownloadEmails" />
+        <activity android:name=".general_duties.academy.GeneralDuties_IdeaEvaluation" />
+        <activity android:name=".general_duties.academy.GeneralDuties_YILFellowship" />
+        <activity android:name=".entrepreneur.Entrepreneur_ViewMentors" />
+        <activity android:name=".organization.Organization_EditProfile" />
+        <activity android:name=".mentor.Mentor_EditCompensationPlan" />
+        <activity android:name=".mentor.Mentor_SearchMentors" />
+        <activity android:name=".general_duties.academy.GeneralDuties_RegisteredList" />
+        <activity android:name=".general_duties.academy.GeneralDuties_PremiumCoursesDetails" />
+        <activity android:name=".general_duties.academy.GeneralDuties_InnovationCircle" />
+        <activity android:name=".general_duties.academy.GeneralDuties_MasterClasses" />
+        <activity android:name=".general_duties.academy.GeneralDuties_MovieClub" />
+        <activity android:name=".general_duties.academy.GeneralDuties_BookClub" />
+        <activity android:name=".general_duties.academy.GeneralDuties_PremiumCourses" />
+        <activity android:name=".general_duties.academy.GeneralDuties_ShortCourses" />
+        <activity android:name=".general_duties.update_subscriptions.GeneralDuties_UpdateAcademySubscription" />
+        <activity android:name=".general_duties.update_subscriptions.GeneralDuties_UpdateSubscriptions" />
+        <activity android:name=".Login" />
+        <activity android:name=".general_duties.GeneralDuties_Summary" />
+        <activity android:name=".general_duties.GeneralDuties_Academy" />
+        <activity android:name=".general_duties.update_subscriptions.GeneralDuties_UpdateHubSubscription" />
+        <activity android:name=".general_duties.GeneralDuties" />
+        <activity android:name=".organization.Organization_Profile" />
+        <activity android:name=".organization.Organization_ViewAllOrganizations" />
+        <activity android:name=".organization.Organization_ApproveAccountDetails" />
+        <activity android:name=".organization.Organization_ApproveAccount" />
+        <activity
+            android:name=".organization.Organization_SkipMembers"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".organization.Organization_Notifications" />
+        <activity android:name=".organization.Organization" />
+        <activity android:name=".mentor.Mentor_MentpredEntrepreneurs" />
+        <activity android:name=".mentor.Mentor_Wallet" />
+        <activity android:name=".mentor.Mentor_ApproveAccountDetails" />
+        <activity android:name=".mentor.Mentor_ApproveAccount" />
+        <activity android:name=".mentor.Mentor_PayoutRequestDetails" />
+        <activity android:name=".mentor.Mentor_ManagePayoutRequest" />
+        <activity android:name=".mentor.Mentor_Profile" />
+        <activity android:name=".mentor.Mentor_ViewAllMentors" />
+        <activity android:name=".mentor.Mentor_Notifications" />
+        <activity android:name=".mentor.Mentor" />
+        <activity android:name=".entrepreneur.Entrepreneur_Notifications" />
+        <activity android:name=".entrepreneur.Entrepreneur_Profile" />
+        <activity android:name=".Chat" />
+        <activity android:name=".entrepreneur.Entrepreneur" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
