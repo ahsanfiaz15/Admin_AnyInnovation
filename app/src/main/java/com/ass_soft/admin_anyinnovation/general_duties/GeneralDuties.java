@@ -19,21 +19,9 @@ public class GeneralDuties extends AppCompatActivity {
         setContentView(R.layout.activity_general_duties);
     }
 
-    public void updateSubscriptionPlan(View view) {
-        Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
-       // Intent intent = new Intent(GeneralDuties.this, GeneralDuties_UpdateSubscriptions.class);
-        //startActivity(intent);
-    }
 
-    public void academy(View view) {
 
-        Intent intent = new Intent(GeneralDuties.this, GeneralDuties_Academy.class);
-        startActivity(intent);
-    }
 
-    public void summary(View view) {
-        Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
-        //Intent intent = new Intent(GeneralDuties.this, GeneralDuties_Summary.class);
-        //startActivity(intent);
-    }
+
+
 }

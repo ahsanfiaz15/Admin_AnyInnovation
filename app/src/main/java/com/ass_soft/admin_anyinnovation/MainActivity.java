@@ -13,6 +13,10 @@ import android.widget.Toast;
 import com.ass_soft.admin_anyinnovation.Helpers.Permissions;
 import com.ass_soft.admin_anyinnovation.entrepreneur.Entrepreneur;
 import com.ass_soft.admin_anyinnovation.general_duties.GeneralDuties;
+import com.ass_soft.admin_anyinnovation.general_duties.GeneralDuties_Academy;
+import com.ass_soft.admin_anyinnovation.general_duties.GeneralDuties_Summary;
+import com.ass_soft.admin_anyinnovation.general_duties.update_subscriptions.GeneralDuties_UpdateSubscriptions;
+import com.ass_soft.admin_anyinnovation.investor.InvestorMenu;
 import com.ass_soft.admin_anyinnovation.mentor.Mentor;
 import com.ass_soft.admin_anyinnovation.organization.Organization;
 
@@ -74,15 +78,33 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void generalDuties(View view) {
-
-        Intent intent = new Intent(MainActivity.this, GeneralDuties.class);
+    public void downloadEmails(View view) {
+        //Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this, DownloadEmails.class);
         startActivity(intent);
     }
 
-    public void downloadEmails(View view) {
-        Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
-        //Intent intent = new Intent(MainActivity.this, DownloadEmails.class);
-        //startActivity(intent);
+    public void academy(View view) {
+
+        Intent intent = new Intent(MainActivity.this, GeneralDuties_Academy.class);
+        startActivity(intent);
+    }
+
+    public void updateSubscriptionPlan(View view) {
+        //Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
+         Intent intent = new Intent(MainActivity.this, GeneralDuties_UpdateSubscriptions.class);
+        startActivity(intent);
+    }
+
+    public void summary(View view) {
+        //Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this, GeneralDuties_Summary.class);
+        startActivity(intent);
+    }
+
+    public void investor(View view) {
+
+        Intent intent = new Intent(MainActivity.this, InvestorMenu.class);
+        startActivity(intent);
     }
 }

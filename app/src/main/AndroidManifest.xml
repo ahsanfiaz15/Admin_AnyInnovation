@@ -16,6 +16,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Admin_AnyInnovation"
         android:usesCleartextTraffic="true">
+        <activity android:name=".investor.InvestorApproveAccountDetails"></activity>
+        <activity android:name=".investor.InvestorApproveAccount" />
+        <activity android:name=".investor.InvestorMenu" />
+        <activity android:name=".investor.InvestorSponsoredEntrepreneurs" />
+        <activity android:name=".investor.InvestorProfile" />
+        <activity android:name=".investor.InvestorNotifications" />
+        <activity android:name=".investor.InvestorViewAll" />
         <activity android:name=".general_duties.academy.MovieClub_RegisteredList"></activity>
         <activity android:name=".general_duties.academy.BookClub_RegisteredList" />
         <activity android:name=".general_duties.academy.GeneralDuties_InnovationCircleRegisteredList" />
