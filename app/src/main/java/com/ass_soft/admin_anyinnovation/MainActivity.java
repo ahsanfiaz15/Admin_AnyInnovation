@@ -57,21 +57,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void entrepreneur(View view) {
-        Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
-       // Intent intent = new Intent(MainActivity.this, Entrepreneur.class);
-        //startActivity(intent);
+       // Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this, Entrepreneur.class);
+        startActivity(intent);
     }
 
     public void mentor(View view) {
-        Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
-        //Intent intent = new Intent(MainActivity.this, Mentor.class);
-        //startActivity(intent);
+       // Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this, Mentor.class);
+        startActivity(intent);
     }
 
     public void organizations(View view) {
-        Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
-        //Intent intent = new Intent(MainActivity.this, Organization.class);
-        //startActivity(intent);
+        //Toast.makeText(getApplicationContext(),"Under Development",Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(MainActivity.this, Organization.class);
+        startActivity(intent);
     }
 
     public void generalDuties(View view) {

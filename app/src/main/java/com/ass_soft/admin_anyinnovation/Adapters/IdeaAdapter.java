@@ -82,7 +82,7 @@ public class IdeaAdapter extends RecyclerView.Adapter<IdeaAdapter.ViewHolder> {
 
             img = (ImageView) itemView.findViewById(R.id.profile_entrepreneur);
             this.itemView=itemView;
-            cardView=itemView.findViewById(R.id.test);
+            cardView=itemView.findViewById(R.id.itemViewEntrepreneur);
             job=(TextView)itemView.findViewById(R.id.tv_entrepreneur_job);
             name=(TextView)itemView.findViewById(R.id.tv_entrepreneur_name) ;
        //     download=(ImageButton) itemView.findViewById(R.id.btn_download_yil_form);

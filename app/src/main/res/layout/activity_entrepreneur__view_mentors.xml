@@ -52,31 +52,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView43" />
 
-    <include
-        android:id="@+id/include11"
-        layout="@layout/item_view_mentor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="@+id/RV"
-        app:layout_constraintStart_toStartOf="@+id/RV"
-        app:layout_constraintTop_toTopOf="@+id/RV" />
-
-    <include
-        android:id="@+id/include13"
-        layout="@layout/item_view_mentor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/RV"
-        app:layout_constraintStart_toStartOf="@+id/RV"
-        app:layout_constraintTop_toBottomOf="@+id/include11" />
-
-    <include
-        layout="@layout/item_view_mentor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/RV"
-        app:layout_constraintStart_toStartOf="@+id/RV"
-        app:layout_constraintTop_toBottomOf="@+id/include13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

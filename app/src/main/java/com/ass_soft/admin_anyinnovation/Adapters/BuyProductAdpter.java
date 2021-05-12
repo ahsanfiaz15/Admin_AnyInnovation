@@ -88,7 +88,7 @@ public class BuyProductAdpter extends RecyclerView.Adapter<BuyProductAdpter.View
             img = (ImageView) itemView.findViewById(R.id.profile_entrepreneur);
             this.itemView=itemView;
             title=(TextView)itemView.findViewById(R.id.tv_entrepreneur_job);
-            con=itemView.findViewById(R.id.test);
+            con=itemView.findViewById(R.id.itemViewEntrepreneur);
             name=(TextView)itemView.findViewById(R.id.tv_entrepreneur_name) ;
 
         }
