@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="items">
+        <item>Aerospace</item>
+        <item>Agriculture</item>
+        <item>App</item>
+        <item>Augmented Reality</item>
+        <item>Biotechnology</item>
+        <item>Blockchain</item>
+        <item>Business Products &amp; Services</item>
+        <item>Chemicals &amp; Chemical Products</item>
+        <item>Clean Technology</item>
+        <item>Computers</item>
+        <item>Construction &amp; Engineering</item>
+        <item>Consulting</item>
+        <item>Consumer Products &amp; Services</item>
+        <item>Digital Marketing</item>
+        <item>Education</item>
+        <item>Electronics</item>
+        <item>Energy, Solar &amp; Renewables</item>
+        <item>Equipment</item>
+        <item>Events</item>
+        <item>Farming</item>
+        <item>Fashion</item>
+        <item>Financial Services</item>
+        <item>Fin Tech</item>
+        <item>Food &amp; Beverage</item>
+        <item>Gaming</item>
+        <item>Healthcare</item>
+        <item>Industrial/Energy</item>
+        <item>Internet/Web Service</item>
+        <item>IOT</item>
+        <item>IT Services</item>
+        <item>Legal</item>
+        <item>Leisure, Sports &amp; Gaming</item>
+        <item>Lifestyle</item>
+        <item>Logistics &amp; Transport</item>
+        <item>Marine</item>
+        <item>Marketing</item>
+        <item>Media &amp; Entertainment</item>
+        <item>Medical</item>
+        <item>Medical Devices &amp; Equipment</item>
+        <item>Mining</item>
+        <item>Mobile</item>
+        <item>Nanotechnology</item>
+        <item>Oil &amp; Gas</item>
+        <item>Other</item>
+        <item>Real Estate</item>
+        <item>Retail/Distribution</item>
+        <item>Robotics</item>
+        <item>Security</item>
+        <item>Shipping</item>
+        <item>Social Network</item>
+        <item>Software</item>
+        <item>Sports</item>
+        <item>Technology</item>
+        <item>Telecommunications</item>
+        <item>Transportation</item>
+        <item>Travel</item>
+        <item>Virtual Reality</item>
+    </array>
+</resources>

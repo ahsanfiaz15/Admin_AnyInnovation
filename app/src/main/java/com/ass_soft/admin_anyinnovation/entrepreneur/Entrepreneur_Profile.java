@@ -30,8 +30,11 @@ import com.google.gson.Gson;
 
 import org.json.JSONArray;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class Entrepreneur_Profile extends AppCompatActivity {
@@ -51,6 +54,79 @@ public class Entrepreneur_Profile extends AppCompatActivity {
                 block();
             }
         });
+
+        Button reward=findViewById(R.id.btn_reward_free_month);
+        reward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                set_reward_month();
+            }
+        });
+    }
+
+    private void set_reward_month() {
+        final ProgressDialog progressDialog = new ProgressDialog(Entrepreneur_Profile.this);
+
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Please wait...");
+        progressDialog.show();
+
+        String url = Config.url+ "/add_sub.php";
+        StringRequest postRequest = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        progressDialog.dismiss();
+                        try {
+                            Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+
+                        } catch (Exception e) {
+
+                            //  e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressDialog.dismiss();
+
+                        // error.printStackTrace();
+                        // Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams()
+            {
+                Date date = new Date();
+                SimpleDateFormat df  = new SimpleDateFormat("YYYY-MM-dd");
+                Calendar c1 = Calendar.getInstance();
+                String cdate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
+                c1.add(Calendar.DAY_OF_YEAR, 30);
+                df = new SimpleDateFormat("yyyy-MM-dd");
+                Date resultDate = c1.getTime();
+                String     dueDate = df.format(resultDate);
+
+
+                Map<String, String> params = new HashMap<>();
+                // the POST parameters:
+                params.put("packge","Reward for month");
+                params.put("email",email);
+                params.put("date",cdate);
+                params.put("type","reward");
+                params.put("exp",dueDate);
+
+
+
+                return params;
+            }
+        };
+
+        Volley.newRequestQueue(getApplicationContext()).add(postRequest);
+
     }
 
     private void block() {
