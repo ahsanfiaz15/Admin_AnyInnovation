@@ -7,13 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.ass_soft.admin_anyinnovation.R;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
 public class Mentor_SearchMentors extends AppCompatActivity {
 
-    MaterialSpinner specialized_skills_spinner, choose_industry_spinner, job_function_spinner, location_spinner;
+    MaterialSpinner choose_industry_spinner;
+    EditText edt_worktitle_position,edt_city;
     Button btn_search;
     CardView itemViewMentor;
 
@@ -32,32 +34,8 @@ public class Mentor_SearchMentors extends AppCompatActivity {
             }
         });
 
-        specialized_skills_spinner.setItems("Skill 1","Skill 2","Skill 3","Skill 4");
-        specialized_skills_spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
-
-            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
-
-            }
-        });
-
         choose_industry_spinner.setItems("Industry 1","Industry 2","Industry 3","Industry 4");
         choose_industry_spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
-
-            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
-
-            }
-        });
-
-        job_function_spinner.setItems("Job Function 1","Job Function 2","Job Function 3","Job Function 4");
-        job_function_spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
-
-            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
-
-            }
-        });
-
-        location_spinner.setItems("Country1","Country2","Country3","Country4");
-        location_spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
 
             @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
 
@@ -68,12 +46,11 @@ public class Mentor_SearchMentors extends AppCompatActivity {
     private void initViews()
     {
         btn_search = findViewById(R.id.btn_search);
-        specialized_skills_spinner = (MaterialSpinner)findViewById(R.id.specialized_skills_spinner);
         choose_industry_spinner = (MaterialSpinner)findViewById(R.id.choose_industry_spinner);
-        job_function_spinner = (MaterialSpinner)findViewById(R.id.job_function_spinner);
-        location_spinner = (MaterialSpinner)findViewById(R.id.location_spinner);
         itemViewMentor = findViewById(R.id.itemViewMentor);
-    }
+        edt_worktitle_position = findViewById(R.id.edt_worktitle_position);
+        edt_city = findViewById(R.id.edt_city);
+     }
 
     public void mentorSearch(View view) {
     }
