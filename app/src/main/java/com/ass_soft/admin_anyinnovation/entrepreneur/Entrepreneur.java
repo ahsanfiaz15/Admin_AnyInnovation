@@ -40,7 +40,7 @@ public class Entrepreneur extends AppCompatActivity implements SearchView.OnQuer
         setContentView(R.layout.activity_entrepreneur);
          list=new ArrayList<>();
 
-    getEnt();
+         getEnt();
       try {
           SearchView searchView = findViewById(R.id.searchView_search_entrepreneur);
           searchView.setOnQueryTextListener(this);
@@ -55,6 +55,7 @@ public class Entrepreneur extends AppCompatActivity implements SearchView.OnQuer
     public void entrepreneurNotifications(View view) {
 
         Intent intent = new Intent(Entrepreneur.this, Entrepreneur_Notifications.class);
+         
         startActivity(intent);
     }
 

@@ -8,8 +8,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Config {
-    final public static String url="http://192.168.43.164///toop/";
-  // final public static String url="https://innovatorstower.com/apis/";
+ //   final public static String url="http://192.168.43.164///toop/";
+ final public static String url="https://innovatorstower.com//apis1/Toop/";
     public static int chker=0;
     public static int reorder=0;
     public static String getAge(String d){
