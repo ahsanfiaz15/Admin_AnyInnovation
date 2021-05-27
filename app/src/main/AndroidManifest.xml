@@ -92,6 +92,25 @@
                 android:resource="@xml/file_pths" />
         </provider>
 
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple" />
+        <service
+            android:name=".MyFirebaseMessaging"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
